@@ -8,18 +8,16 @@
       <li>5. What is the appropriate usage, and functionality for router-view component,also what is the difference in using nuxtpage here ? 
             And why can i only find unofficial implementations instead of official docs ? </li>
     </ul>
-    <NuxtPage v-if="nuxtPage" />
-    <router-view v-else />
+    <NuxtPage v-if="nuxtPage" :nuxtPage="nuxtPage"/>
+    <router-view v-else :nuxtPage="nuxtPage"/>
     <p>Now rendering page with <button @click="nuxtPage ? nuxtPage = false : nuxtPage = true;">{{nuxtPage == true ? '<NuxtPage/>' : '<router-view>'}}</button></p>
   </div>
 </template>
 
 <script>
-
 export default defineComponent({
-  async setup() {
-    const nuxtPage = ref(false)
-    return {nuxtPage}
-  }
-})
+async setup() {
+  const nuxtPage = ref(false)
+  return {nuxtPage}
+}})
 </script>
