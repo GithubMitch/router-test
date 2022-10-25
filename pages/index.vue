@@ -1,15 +1,9 @@
 <template>
   <main>
     <nav>
-      <NuxtLink :to="`/`">
-        Home
-      </NuxtLink>
-      <NuxtLink :to="`/type-topups/`">
-        Topups
-      </NuxtLink> 
-      <NuxtLink :to="`/type-giftcards/`">
-        Giftcards
-      </NuxtLink>   
+      <NuxtLink :to="`/`"> Home</NuxtLink>
+      <NuxtLink :to="`/type-topups/`">Topups</NuxtLink> 
+      <NuxtLink :to="`/type-giftcards/`">Giftcards</NuxtLink>   
     </nav>
     <h1>Home</h1>
     <div id="params">
